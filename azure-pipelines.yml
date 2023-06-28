@@ -1,4 +1,12 @@
 # Node.js with Vue
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    appType: 'webApp'
+    WebAppName: 
+    deployToSlotOrASE: true
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 - task: SqlAzureDacpacDeployment@1
   inputs:
     AuthenticationType: 'server'
