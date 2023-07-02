@@ -27,7 +27,10 @@ export type MarkerFormatType =
   // sanitized. Please be careful with including other types of PII here as well.
   // e.g. "Label: Some String"
   | 'string'
-
+  /// An index into a (currently) thread-local string table, aka UniqueStringArray
+  /// This is effectively an integer, so wherever we need to display this value, we
+  /// must first perform a lookup into the appropriate string table.
+  | 'unique-string'
   // ----------------------------------------------------
   // Numeric types
 
@@ -86,6 +89,25 @@ export type MarkerDisplayLocation =
   // TODO - This is not supported yet.
   | 'stack-chart';
 
+export type MarkerGraphColor =
+  | 'blue'
+  | 'green'
+  | 'grey'
+  | 'ink'
+  | 'magenta'
+  | 'orange'
+  | 'purple'
+  | 'red'
+  | 'teal'
+  | 'yellow';
+
+export type MarkerGraphType = 'bar' | 'line' | 'line-filled';
+export type MarkerGraph = {|
+  key: string,
+  type: MarkerGraphType,
+  color?: MarkerGraphColor,
+|};
+
 export type MarkerSchema = {|
   // The unique identifier for this marker.
   name: string, // e.g. "CC"
@@ -120,6 +142,9 @@ export type MarkerSchema = {|
         value: string,
       |}
   >,
+
+  // if present, give the marker its own local track
+  graphs?: Array<MarkerGraph>,
 |};
 
 export type MarkerSchemaByName = ObjectMap<MarkerSchema>;
