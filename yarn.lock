@@ -1258,10 +1258,10 @@
   resolved "https://registry.yarnpkg.com/@fluent/langneg/-/langneg-0.7.0.tgz#51c58d0b422595640195d8234c0f15687cfcb261"
   integrity sha512-StAM0vgsD1QK+nFikaKs9Rxe3JGNipiXrpmemNGwM4gWERBXPe9gjzsBoKjgBgq1Vyiy+xy/C652QIWY+MPyYw==
 
-"@fluent/react@^0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@fluent/react/-/react-0.15.1.tgz#62ddacbfabfe1312ced649b74789948d3ca4ca7d"
-  integrity sha512-7RdjqTm5OcO7ZtCxXBfhnf+iSlj/PMjPomsHmq+F69H2UNu4hW/BzFHGwMNMMe6fQ1Fu64qlt1C2tI0sP2EPVA==
+"@fluent/react@^0.15.2":
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/@fluent/react/-/react-0.15.2.tgz#7baff50e0842184ca46d6c9423a14ea03bf590ff"
+  integrity sha512-M2klqXTUJTD8o2VDm6vEXApE/pSc16YtB7DSZ/Q8cPYF63FgDkvquVLHjzzG1PvrK9JlKJKPzl3wJ7hTAqSK4w==
   dependencies:
     "@fluent/sequence" "^0.8.0"
     cached-iterable "^0.3.0"
